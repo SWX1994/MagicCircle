@@ -6,24 +6,6 @@
  */
 
 /* eslint-disable */
-import { createPyProc, exitPyProc } from './pythread';
-// var menubar = require('menubar')
-
-// var mb = menubar()
-
-// mb.on('ready', function ready () {
-//   console.log('app is ready')
-//   require('./index')
-//   // launch zeromq server for python
-//   createPyProc();
-// })
-
-// mb.on('after-close', function quit () {
-//   exitPyProc();
-// })
-
-// Set environment for development
-process.env.NODE_ENV = 'development'
 
 // Install `electron-debug` with `devtron`
 require('electron-debug')({ showDevTools: true })
@@ -36,10 +18,7 @@ require('electron').app.on('ready', () => {
     .catch(err => {
       console.log('Unable to install `vue-devtools`: \n', err)
     })
-  // launch zeromq server for python
-  createPyProc();
 })
-require('electron').app.on('will-quit', exitPyProc);
 
 // Require `main` process to boot app
 require('./index')

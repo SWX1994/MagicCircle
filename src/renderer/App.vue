@@ -6,8 +6,8 @@
 
 <script>
   export default {
-    name: 'magic-circle'
-  }
+    name: 'magiccircle',
+  };
 </script>
 
 <style>

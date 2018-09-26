@@ -32,17 +32,17 @@
 
 <script>
   export default {
-    data () {
+    data() {
       return {
-        electron: process.versions['atom-shell'],
-        name: 'landing-page',
+        electron: process.versions.electron,
+        name: this.$route.name,
         node: process.versions.node,
-        path: '/',
+        path: this.$route.path,
         platform: require('os').platform(),
-        vue: require('vue/package.json').version
-      }
-    }
-  }
+        vue: require('vue/package.json').version,
+      };
+    },
+  };
 </script>
 
 <style scoped>
